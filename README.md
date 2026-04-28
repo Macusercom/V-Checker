@@ -44,6 +44,6 @@ Then open [http://localhost:8000](http://localhost:8000) in your browser.
 ## Images
 ![Screenshot](images/image1.png)
 
-![Screenshot](images/image%202.png)
+![Screenshot](images/image2.png)
 
 ![Screenshot](images/image3.png)
