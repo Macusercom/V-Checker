@@ -58,7 +58,7 @@ window.V_CHECK_DATA = {
     // ── Konservierungsstoffe & Antioxidantien (E200–E392) ──
     "E200":  { name: "Sorbinsäure", status: "vegan" },
     "E202":  { name: "Kaliumsorbat", status: "vegan" },
-    "E203":  { name: "Calciumsorbat", status: "vegan" },
+    "E203":  { name: "Calciumsorbat", status: "vegan", note: "in der EU als Lebensmittelzusatzstoff nicht mehr zugelassen" },
     "E210":  { name: "Benzoesäure", status: "vegan" },
     "E211":  { name: "Natriumbenzoat", status: "vegan" },
     "E212":  { name: "Kaliumbenzoat", status: "vegan" },
@@ -160,15 +160,18 @@ window.V_CHECK_DATA = {
     "E417":  { name: "Tara-Gummi", status: "vegan" },
     "E418":  { name: "Gellan", status: "vegan" },
     "E422":  { name: "Glycerin", status: "conditional", note: "pflanzlich, synthetisch oder tierisch möglich" },
+    "E423":  { name: "Modifiziertes Gummi arabicum", status: "vegan" },
     "E425":  { name: "Konjak", status: "vegan" },
     "E426":  { name: "Sojabohnen-Hemicellulose", status: "vegan" },
     "E427":  { name: "Cassia-Gummi", status: "vegan" },
+    "E431":  { name: "Polyoxyethylenstearate", status: "conditional", note: "Fettsäureherkunft prüfen" },
     "E432":  { name: "Polysorbat 20", status: "conditional", note: "Fettsäureherkunft prüfen" },
     "E433":  { name: "Polysorbat 80", status: "conditional", note: "Fettsäureherkunft prüfen" },
     "E434":  { name: "Polysorbat 40", status: "conditional", note: "Fettsäureherkunft prüfen" },
     "E435":  { name: "Polysorbat 60", status: "conditional", note: "Fettsäureherkunft prüfen" },
     "E436":  { name: "Polysorbat 65", status: "conditional", note: "Fettsäureherkunft prüfen" },
     "E440":  { name: "Pektine", status: "vegan" },
+    "E441":  { name: "Gelatine", status: "non-vegetarian", note: "tierischen Ursprungs" },
     "E442":  { name: "Ammoniumphosphatide", status: "conditional", note: "Fett-/Glycerinherkunft prüfen" },
     "E444":  { name: "Saccharoseacetatisobutyrat", status: "vegan" },
     "E445":  { name: "Glycerinester aus Wurzelharz", status: "conditional", note: "Glycerinherkunft prüfen" },
@@ -233,6 +236,7 @@ window.V_CHECK_DATA = {
     "E535":  { name: "Natriumferrocyanid", status: "vegan" },
     "E536":  { name: "Kaliumferrocyanid", status: "vegan" },
     "E538":  { name: "Calciumferrocyanid", status: "vegan" },
+    "E542":  { name: "Knochenphosphat", status: "non-vegetarian", note: "aus Tierknochen gewonnen" },
     "E551":  { name: "Siliciumdioxid", status: "vegan" },
     "E552":  { name: "Calciumsilicat", status: "vegan" },
     "E553a": { name: "Magnesiumsilicate", status: "vegan" },
@@ -275,7 +279,7 @@ window.V_CHECK_DATA = {
     "E901":  { name: "Bienenwachs", status: "vegetarian", note: "Bienenprodukt – nicht vegan" },
     "E902":  { name: "Candelillawachs", status: "vegan" },
     "E903":  { name: "Carnaubawachs", status: "vegan" },
-    "E904":  { name: "Schellack", status: "vegetarian", note: "aus Lackschildlaus – nicht vegan" },
+    "E904":  { name: "Schellack", status: "conditional", note: "aus Lackschildlaus – von vielen Vegetarierstandards ausgeschlossen (V-Label, Vegetarian Society)" },
     "E905":  { name: "Mikrokristallines Wachs", status: "vegan" },
     "E907":  { name: "Hydriertes Poly-1-decen", status: "vegan" },
     "E912":  { name: "Montansäureester", status: "vegan" },
@@ -526,14 +530,14 @@ window.V_CHECK_DATA = {
       termsFr: ["porc", "boeuf", "poulet", "dinde", "agneau", "veau", "canard", "oie", "mouton", "venaison", "lapin", "jambon", "bacon", "saucisson", "lardons", "chorizo", "mortadelle", "volaille", "viande hachee", "extrait de viande"],
       termsIt: ["maiale", "manzo", "pollo", "tacchino", "agnello", "vitello", "anatra", "oca", "montone", "cinghiale", "coniglio", "prosciutto", "pancetta", "salame", "mortadella", "salsiccia", "speck", "bresaola", "pollame", "carne macinata"],
       termsEs: ["cerdo", "ternera", "pollo", "pavo", "cordero", "pato", "oca", "caza", "jamon", "bacon", "salchichon", "chorizo", "mortadela", "panceta", "ave", "carne picada"],
-      exclude: ["fleischlos", "vegetarische wurst", "vegane wurst", "ohne fleisch", "meatless", "vegan meat", "plant-based meat", "meat-free"]
+      exclude: ["fleischlos", "vegetarische wurst", "vegane wurst", "ohne fleisch", "meatless", "vegan meat", "plant-based meat", "meat-free", "champignon", "chamomile", "chamomille", "chamomilla", "manzanilla"]
     },
     {
       status: "non-vegetarian",
       label: "Fish / Seafood",
       reason: "Contains fish or seafood.",
       terms: ["lachs", "thunfisch", "hering", "matjes", "makrele", "kabeljau", "scholle", "forelle", "garnele", "garnelen", "shrimp", "krabbe", "krabben", "hummer", "languste", "krebs", "krebse", "muschel", "muscheln", "auster", "austern", "tintenfisch", "calamari", "sepia", "kaviar", "rogen", "fischmehl", "fischbruhe", "fischfond"],
-      termsEn: ["salmon", "tuna", "herring", "mackerel", "cod", "trout", "halibut", "sole", "shrimp", "prawns", "crab", "lobster", "crayfish", "mussel", "oyster", "squid", "octopus", "caviar", "roe", "fish meal", "fish protein", "fish stock", "fish broth", "worcestershire sauce"],
+      termsEn: ["salmon", "tuna", "herring", "mackerel", "cod", "trout", "halibut", "sole", "shrimp", "prawns", "crab", "lobster", "crayfish", "mussel", "oyster", "squid", "octopus", "caviar", "roe", "fish meal", "fish protein", "fish stock", "fish broth"],
       termsFr: ["saumon", "thon", "hareng", "maquereau", "cabillaud", "truite", "crevette", "crabe", "homard", "ecrevisse", "moule", "huitre", "calmar", "poulpe", "caviar", "oeufs de poisson", "bouillon de poisson"],
       termsIt: ["salmone", "tonno", "aringa", "sgombro", "merluzzo", "trota", "halibut", "gamberetto", "gambero", "granchio", "aragosta", "astice", "cozza", "ostrica", "calamaro", "polpo", "caviale", "uova di pesce", "brodo di pesce"],
       termsEs: ["salmon", "atun", "arenque", "caballa", "bacalao", "trucha", "lenguado", "gamba", "langostino", "cangrejo", "langosta", "mejillon", "ostra", "calamar", "pulpo", "caviar", "huevas", "caldo de pescado"],
@@ -581,7 +585,7 @@ window.V_CHECK_DATA = {
       termsFr: ["lait", "lait entier", "lait ecreme", "lait concentre", "babeurre", "poudre de lait", "proteines de lait", "matieres grasses laitieres", "lactose", "produits laitiers"],
       termsIt: ["latte", "latte intero", "latte scremato", "latte condensato", "latticello", "polvere di latte", "proteine del latte", "grassi del latte", "lattosio", "derivati del latte"],
       termsEs: ["leche", "leche entera", "leche desnatada", "leche condensada", "suero de leche", "proteinas lacteas", "grasa lactea", "lactosa", "productos lacteos", "leche en polvo"],
-      exclude: ["milchsaure", "milchsaurebakterien", "milchsaurekultur", "kokosmilch", "mandelmilch", "sojamilch", "hafermilch", "reismilch", "pflanzenmilch", "ohne milch", "milchfrei", "milchersatz", "coconut milk", "oat milk", "almond milk", "soy milk", "soya milk", "rice milk", "dairy-free", "milk-free", "lait de coco", "lait de soja", "lait d'avoine", "lait d'amande", "latte di cocco", "latte di soia", "latte di avena", "leche de coco", "leche de soja", "leche de avena"]
+      exclude: ["milchsaure", "milchsaurebakterien", "milchsaurekultur", "kokosmilch", "mandelmilch", "sojamilch", "hafermilch", "reismilch", "pflanzenmilch", "ohne milch", "milchfrei", "milchersatz", "coconut milk", "oat milk", "almond milk", "soy milk", "soya milk", "rice milk", "dairy-free", "milk-free", "lait de coco", "lait de soja", "lait d'avoine", "lait d'amande", "latte di cocco", "latte di soia", "latte di avena", "leche de coco", "leche de soja", "leche de avena", "laitue", "laiteron", "lactucarium"]
     },
     {
       status: "vegetarian",
@@ -612,17 +616,17 @@ window.V_CHECK_DATA = {
       termsFr: ["beurre", "creme", "creme fraiche", "creme liquide", "creme epaisse", "ghee", "beurre clarifie", "mascarpone"],
       termsIt: ["burro", "panna", "panna fresca", "panna acida", "panna da montare", "ghee", "burro chiarificato", "mascarpone"],
       termsEs: ["mantequilla", "nata", "crema", "crema agria", "nata para montar", "ghee", "mantequilla clarificada", "mascarpone"],
-      exclude: ["erdnussbutter", "kakaobutter", "sheabutter", "nussbutter", "mandelbutter", "kokosbutter", "pflanzenbutter", "vegane butter", "butterersatz", "buttersaure", "peanut butter", "cocoa butter", "shea butter", "nut butter", "almond butter", "cashew butter", "coconut butter", "vegan butter", "beurre de cacao", "burro di cacao", "mantequilla de cacahuete", "manteca de cacao"]
+      exclude: ["erdnussbutter", "kakaobutter", "sheabutter", "nussbutter", "mandelbutter", "kokosbutter", "pflanzenbutter", "vegane butter", "butterersatz", "buttersaure", "peanut butter", "cocoa butter", "shea butter", "nut butter", "almond butter", "cashew butter", "coconut butter", "vegan butter", "beurre de cacao", "burro di cacao", "mantequilla de cacahuete", "manteca de cacao", "coconut cream", "cream of tartar", "creme de tartre", "creamed coconut", "ice cream alternative", "vegan cream"]
     },
     {
-      status: "vegetarian",
+      status: "conditional",
       label: "Cheese / Yogurt",
-      reason: "Dairy products (vegetarian, not vegan).",
+      reason: "Dairy products – yogurt is vegetarian; cheese may contain animal rennet. PDO cheeses (Parmesan, Parmigiano Reggiano, Grana Padano, Pecorino) traditionally use animal rennet.",
       terms: ["kase", "kaese", "joghurt", "yoghurt", "quark", "topfen", "skyr", "mozzarella", "parmesan", "parmigiano", "gouda", "cheddar", "feta", "ricotta", "frischkase", "huttenkase", "emmentaler", "edamer", "camembert", "brie", "gorgonzola", "halloumi", "raclette"],
-      termsEn: ["cheese", "yogurt", "yoghurt", "quark", "fromage frais", "mozzarella", "parmesan", "gouda", "cheddar", "feta", "ricotta", "cream cheese", "cottage cheese", "brie", "camembert", "emmental", "halloumi", "skyr"],
-      termsFr: ["fromage", "yaourt", "fromage blanc", "quark", "mozzarella", "parmesan", "gouda", "cheddar", "feta", "ricotta", "brie", "camembert", "emmental", "gruyere", "comte"],
-      termsIt: ["formaggio", "yogurt", "yoghurt", "ricotta", "mozzarella", "parmigiano", "grana padano", "pecorino", "fontina", "gorgonzola", "brie", "camembert", "asiago"],
-      termsEs: ["queso", "yogur", "yoghurt", "requeson", "mozzarella", "parmesano", "gouda", "cheddar", "feta", "brie", "camembert", "manchego", "queso fresco"],
+      termsEn: ["cheese", "yogurt", "yoghurt", "quark", "fromage frais", "mozzarella", "parmesan", "parmesan reggiano", "parmigiano reggiano", "grana padano", "pecorino", "gouda", "cheddar", "feta", "ricotta", "cream cheese", "cottage cheese", "brie", "camembert", "emmental", "halloumi", "skyr"],
+      termsFr: ["fromage", "yaourt", "fromage blanc", "quark", "mozzarella", "parmesan", "parmigiano reggiano", "grana padano", "pecorino", "gouda", "cheddar", "feta", "ricotta", "brie", "camembert", "emmental", "gruyere", "comte"],
+      termsIt: ["formaggio", "yogurt", "yoghurt", "ricotta", "mozzarella", "parmigiano", "parmigiano reggiano", "grana padano", "pecorino", "fontina", "gorgonzola", "brie", "camembert", "asiago"],
+      termsEs: ["queso", "yogur", "yoghurt", "requeson", "mozzarella", "parmesano", "parmigiano reggiano", "grana padano", "pecorino", "gouda", "cheddar", "feta", "brie", "camembert", "manchego", "queso fresco"],
       exclude: ["pflanzlicher kase", "veganer kase", "kaseersatz", "ohne kase", "joghurtalternative", "sojajoghurt", "kokosjoghurt", "haferjoghurt", "mandeljoghurt", "vegan cheese", "dairy-free cheese", "vegan yogurt", "soy yogurt", "coconut yogurt", "fromage vegetal", "yaourt vegetal", "formaggio vegano", "yogurt vegano", "queso vegano", "yogur vegano"]
     },
     {
@@ -634,7 +638,7 @@ window.V_CHECK_DATA = {
       termsFr: ["oeuf", "oeufs", "jaune d'oeuf", "blanc d'oeuf", "oeuf entier", "poudre d'oeuf", "ovalbumine"],
       termsIt: ["uovo", "uova", "tuorlo d'uovo", "albume d'uovo", "uovo intero", "uovo in polvere", "ovoalbumina", "ovomucoide"],
       termsEs: ["huevo", "huevos", "yema de huevo", "clara de huevo", "huevo entero", "huevo en polvo", "ovoalbumina"],
-      exclude: ["eifrei", "veganes ei", "ei-ersatz", "egg-free", "vegan egg", "egg replacer", "sans oeuf", "senza uova", "sin huevo"]
+      exclude: ["eifrei", "veganes ei", "ei-ersatz", "egg-free", "vegan egg", "egg replacer", "sans oeuf", "senza uova", "sin huevo", "eggplant", "egg fruit", "egg nog"]
     },
     {
       status: "vegetarian",
@@ -649,12 +653,22 @@ window.V_CHECK_DATA = {
     {
       status: "vegetarian",
       label: "Bee products",
-      reason: "Beeswax, propolis, royal jelly or bee pollen - not vegan.",
-      terms: ["bienenwachs", "beeswax", "propolis", "gelee royale", "bienengift", "bienenpollen"],
-      termsEn: ["beeswax", "bee wax", "propolis", "royal jelly", "bee pollen"],
-      termsFr: ["cire d'abeille", "cire d'abeilles", "propolis", "gelee royale", "pollen d'abeille"],
-      termsIt: ["cera d'api", "propoli", "pappa reale", "polline d'api"],
-      termsEs: ["cera de abeja", "propoleo", "jalea real", "polen de abeja"]
+      reason: "Beeswax, propolis or bee pollen - not vegan.",
+      terms: ["bienenwachs", "beeswax", "propolis", "bienengift", "bienenpollen"],
+      termsEn: ["beeswax", "bee wax", "propolis", "bee pollen"],
+      termsFr: ["cire d'abeille", "cire d'abeilles", "propolis", "pollen d'abeille"],
+      termsIt: ["cera d'api", "propoli", "polline d'api"],
+      termsEs: ["cera de abeja", "propoleo", "polen de abeja"]
+    },
+    {
+      status: "non-vegetarian",
+      label: "Royal Jelly",
+      reason: "Royal jelly – excluded from vegetarian certification by V-Label and the Vegetarian Society.",
+      terms: ["gelee royale", "weiselfuttersaft", "koeniginnenfuttersaft"],
+      termsEn: ["royal jelly"],
+      termsFr: ["gelee royale"],
+      termsIt: ["pappa reale"],
+      termsEs: ["jalea real"]
     },
     {
       status: "vegetarian",
@@ -667,9 +681,9 @@ window.V_CHECK_DATA = {
       termsEs: ["lanolina", "cera de lana"]
     },
     {
-      status: "vegetarian",
+      status: "conditional",
       label: "Shellac",
-      reason: "From lac insects (E904) - not vegan.",
+      reason: "From lac insects (E904) – excluded by V-Label and the Vegetarian Society as not vegetarian.",
       terms: ["schellack", "shellac"],
       termsEn: ["shellac", "lac resin", "e904"],
       termsFr: ["shellac", "gomme-laque", "laque"],
@@ -677,9 +691,9 @@ window.V_CHECK_DATA = {
       termsEs: ["goma laca", "shellac", "laca"]
     },
     {
-      status: "vegetarian",
+      status: "conditional",
       label: "Microbial rennet",
-      reason: "Microbial rennet - usually vegetarian, often also vegan.",
+      reason: "No animal enzyme – usually vegan-compatible, but strict certifications may check culture media.",
       terms: ["mikrobielles lab", "mikrobielles labferment"],
       termsEn: ["microbial rennet", "vegetarian rennet", "vegetable rennet"],
       termsFr: ["presure microbienne", "presure vegetale"],
