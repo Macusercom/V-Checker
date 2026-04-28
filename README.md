@@ -41,6 +41,14 @@ python3 -m http.server
 Then open [http://localhost:8000](http://localhost:8000) in your browser.
 
 
+## Tech
+- Vanilla HTML, CSS, JavaScript — no framework, no build step
+- [Tesseract.js](https://tesseract.projectnaptha.com/) for in-browser OCR
+- All ingredient and E-number matching runs locally against a bundled database
+
+No data ever leaves your device. Built as a vibe coding project with [Claude](https://claude.ai).
+
+
 ## Images
 ![Screenshot](images/image1.png)
 
