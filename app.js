@@ -441,13 +441,19 @@
   let uiLang = localStorage.getItem("v-checker-lang") || "en";
 
   /* ───────── OCR language selection ───────── */
-  let selectedLangs = new Set(["deu"]);
+  const savedOcrLang = localStorage.getItem("v-checker-ocr-lang") || "deu";
+  let selectedLangs = new Set([savedOcrLang]);
 
   document.querySelectorAll(".lang-chip").forEach(chip => {
+    if (chip.dataset.lang === savedOcrLang) {
+      document.querySelectorAll(".lang-chip").forEach(c => c.classList.remove("active"));
+      chip.classList.add("active");
+    }
     chip.addEventListener("click", () => {
       document.querySelectorAll(".lang-chip").forEach(c => c.classList.remove("active"));
       chip.classList.add("active");
       selectedLangs = new Set([chip.dataset.lang]);
+      localStorage.setItem("v-checker-ocr-lang", chip.dataset.lang);
     });
   });
 
