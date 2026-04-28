@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta name="theme-color" content="#16a34a" />
+  <title>V-Checker – Vegan/Vegetarian Checker</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+  <link rel="icon" type="image/x-icon" href="favicon/favicon.ico" />
+  <link rel="manifest" href="favicon/site.webmanifest" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="ui-lang-toggle">
+      <button id="uiLangDe" class="ui-lang-btn">DE</button>
+      <button id="uiLangEn" class="ui-lang-btn active">EN</button>
+    </div>
+    <h1>🌱 V-Checker</h1>
+    <p class="tagline" data-i18n="tagline">Scan an ingredient list – find out if it's vegan.</p>
+  </header>
+
+  <main>
+    <section id="upload-section" class="card">
+      <div class="upload-area" id="dropZone">
+        <div class="upload-icon">📷</div>
+        <p class="upload-text" data-i18n="upload_text">Take a photo of the ingredient list or upload one</p>
+        <div class="button-row">
+          <label class="btn btn-primary">
+            <input type="file" id="cameraInput" accept="image/*" capture="environment" hidden />
+            <span data-i18n="btn_camera">Take photo</span>
+          </label>
+          <label class="btn btn-secondary">
+            <input type="file" id="galleryInput" accept="image/*" hidden />
+            <span data-i18n="btn_gallery">Choose from gallery</span>
+          </label>
+        </div>
+        <p class="hint" data-i18n="hint">Tip: shoot from directly above, good lighting, sharp focus.</p>
+      </div>
+      <div class="lang-row">
+        <span class="lang-label" data-i18n="lang_label">OCR Language:</span>
+        <div class="lang-chips" id="langChips">
+          <button class="lang-chip active" data-lang="deu">German</button>
+          <button class="lang-chip" data-lang="eng">English</button>
+          <button class="lang-chip" data-lang="fra">French</button>
+          <button class="lang-chip" data-lang="ita">Italian</button>
+          <button class="lang-chip" data-lang="spa">Spanish</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="preview-section" class="card hidden">
+      <div class="preview-tabs">
+        <button class="preview-tab" id="tabOriginal" data-i18n="tab_original">Original</button>
+        <button class="preview-tab active" id="tabOptimiert" data-i18n="tab_optimised">Optimised</button>
+      </div>
+      <div class="preview-wrap">
+        <img id="preview" alt="Original" class="hidden" />
+        <img id="previewProcessed" alt="Optimised" />
+        <div class="preview-spinner" id="previewSpinner" data-i18n="processing">Processing…</div>
+      </div>
+      <div class="threshold-row hidden" id="thresholdRow">
+        <span class="threshold-label" data-i18n="threshold_label">Threshold</span>
+        <input type="range" id="thresholdSlider" min="0" max="255" value="128" />
+        <span class="threshold-val" id="thresholdVal">128</span>
+      </div>
+      <div class="preview-actions">
+        <button id="resetBtn" class="btn btn-text" data-i18n="btn_new_image">↻ New image</button>
+        <button id="analyzeBtn" class="btn btn-primary" disabled data-i18n="btn_analyse">Analyse →</button>
+      </div>
+    </section>
+
+    <section id="progress-section" class="card hidden">
+      <p class="progress-label" id="progressLabel" data-i18n="analysing">Analysing…</p>
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      <p class="progress-pct" id="progressPct">0 %</p>
+    </section>
+
+    <section id="result-section" class="hidden">
+      <div class="verdict" id="verdict">
+        <div class="verdict-emoji" id="verdictEmoji"></div>
+        <div class="verdict-text">
+          <h2 id="verdictTitle"></h2>
+          <p id="verdictSummary"></p>
+        </div>
+      </div>
+
+      <div class="warning-banner hidden" id="warningBanner"></div>
+
+      <div class="card" id="findingsCard">
+        <h3 data-i18n="findings_heading">Detected problematic ingredients</h3>
+        <ul id="findingsList"></ul>
+      </div>
+
+      <details class="card hidden" id="tracesCard">
+        <summary data-i18n="traces_heading">Allergy traces (not counted for verdict)</summary>
+        <pre id="tracesText"></pre>
+      </details>
+
+      <details class="card hidden" id="veganCard">
+        <summary><span data-i18n="safe_heading">Detected safe ingredients</span> (<span id="veganCount">0</span>)</summary>
+        <ul id="veganList"></ul>
+      </details>
+
+      <details class="card">
+        <summary data-i18n="raw_text_heading">Detected text (OCR)</summary>
+        <pre id="rawText"></pre>
+      </details>
+
+      <p class="disclaimer" data-i18n="disclaimer">
+        ⚠️ This analysis is an automated estimate and does not replace careful examination.
+        OCR errors, ambiguous ingredient names or "conditional" E-numbers may affect the result.
+        When in doubt, contact the manufacturer.
+      </p>
+    </section>
+  </main>
+
+  <section class="lookup-section">
+    <details class="card">
+      <summary data-i18n="lookup_summary">Look up E-number</summary>
+      <div class="lookup-body">
+        <input type="text" id="lookupInput" data-i18n-placeholder="lookup_placeholder" placeholder="e.g. E471 or 471" maxlength="8" autocomplete="off" />
+        <div id="lookupResult" class="lookup-result hidden"></div>
+      </div>
+    </details>
+  </section>
+
+  <footer>
+    <p data-i18n="footer_privacy">Data stays local. No cloud, no tracking.</p>
+    <p class="footer-links">
+      <a href="#" id="linkImpressum" data-i18n="footer_imprint">Imprint</a>
+      ·
+      <a href="#" id="linkDatenschutz" data-i18n="footer_privacy_link">Privacy Policy</a>
+      ·
+      <a href="https://github.com/Macusercom/V-Checker" target="_blank" rel="noopener" data-i18n="footer_source">Source code</a>
+    </p>
+    <p class="footer-links">
+      <a href="https://macusercom.github.io/V-Checker/" target="_blank" rel="noopener">macusercom.github.io/V-Checker</a>
+    </p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+      <div id="modalContent" class="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
