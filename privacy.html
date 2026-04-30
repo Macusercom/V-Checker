@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta name="theme-color" content="#16a34a" />
+  <title>Privacy – V-Checker</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+  <link rel="icon" type="image/x-icon" href="favicon/favicon.ico" />
+  <link rel="manifest" href="favicon/site.webmanifest" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="ui-lang-toggle">
+      <button id="uiLangDe" class="ui-lang-btn" type="button">DE</button>
+      <button id="uiLangEn" class="ui-lang-btn active" type="button">EN</button>
+    </div>
+    <h1>🌱 V-Checker</h1>
+    <p class="tagline" data-i18n="subtitle">Privacy Policy</p>
+  </header>
+
+  <nav class="back-nav"><a href="index.html" data-i18n="back_to_app">← Back to the app</a></nav>
+
+  <main>
+    <section class="card legal-content" data-i18n-html="body_html"></section>
+  </main>
+
+  <footer>
+    <p class="footer-links">
+      <a href="index.html" data-i18n="back_to_v_checker">← Back to V-Checker</a>
+      ·
+      <a href="imprint.html" data-i18n="link_imprint">Imprint</a>
+    </p>
+  </footer>
+
+  <script>
+  (function () {
+    const LANG_KEY = 'v-checker-lang';
+    const STRINGS = {
+      de: {
+        page_title: 'Datenschutz – V-Checker',
+        subtitle: 'Datenschutzerklärung',
+        back_to_app: '← Zurück zur App',
+        back_to_v_checker: '← Zurück zu V-Checker',
+        link_imprint: 'Impressum',
+        body_html: `
+<h3>Erklärung zur Informationspflicht</h3>
+<p><strong>Datenschutzerklärung</strong></p>
+<p>In folgender Datenschutzerklärung informieren wir Sie über die wichtigsten Aspekte der Datenverarbeitung im Rahmen unserer Webseite. Wir erheben und verarbeiten personenbezogene Daten nur auf Grundlage der gesetzlichen Bestimmungen (Datenschutzgrundverordnung, Telekommunikationsgesetz 2003).</p>
+<p>Sobald Sie als Benutzer auf unsere Webseite zugreifen oder diese besuchen wird Ihre IP-Adresse, Beginn sowie Beginn und Ende der Sitzung erfasst. Dies ist technisch bedingt und stellt somit ein berechtigtes Interesse iSv Art 6 Abs 1 lit f DSGVO.</p>
+<h5>Kontakt mit uns</h5>
+<p>Wenn Sie uns, entweder über unser Kontaktformular auf unserer Webseite, oder per Email kontaktieren, dann werden die von Ihnen an uns übermittelten Daten zwecks Bearbeitung Ihrer Anfrage oder für den Fall von weiteren Anschlussfragen für sechs Monate bei uns gespeichert. Es erfolgt, ohne Ihre Einwilligung, keine Weitergabe Ihrer übermittelten Daten.</p>
+<h5>Cookies</h5>
+<p>Unsere Website verwendet so genannte Cookies. Dabei handelt es sich um kleine Textdateien, die mit Hilfe des Browsers auf Ihrem Endgerät abgelegt werden. Sie richten keinen Schaden an. Wir nutzen Cookies dazu, unser Angebot nutzerfreundlich zu gestalten. Einige Cookies bleiben auf Ihrem Endgerät gespeichert, bis Sie diese löschen. Sie ermöglichen es uns, Ihren Browser beim nächsten Besuch wiederzuerkennen. Wenn Sie dies nicht wünschen, so können Sie Ihren Browser so einrichten, dass er Sie über das Setzen von Cookies informiert und Sie dies nur im Einzelfall erlauben. Bei der Deaktivierung von Cookies kann die Funktionalität unserer Website eingeschränkt sein.</p>
+<h5>Google Fonts</h5>
+<p>Unsere Website verwendet Schriftarten von „Google Fonts". Der Dienstanbieter dieser Funktion ist:</p>
+<ul><li>Google Ireland Limited Gordon House, Barrow Street Dublin 4. Ireland</li></ul>
+<p>Tel: +353 1 543 1000</p>
+<p>Beim Aufrufen dieser Webseite lädt Ihr Browser Schriftarten und speichert diese in den Cache. Da Sie, als Besucher der Webseite, Daten des Dienstanbieters empfangen kann Google unter Umständen Cookies auf Ihrem Rechner setzen oder analysieren.</p>
+<p>Die Nutzung von „Google-Fonts" dient der Optimierung unserer Dienstleistung und der einheitlichen Darstellung von Inhalten. Dies stellt ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar.</p>
+<p>Weitere Informationen zu Google Fonts erhalten Sie unter folgendem Link:</p>
+<ul><li><a href="https://developers.google.com/fonts/faq">https://developers.google.com/fonts/faq</a></li></ul>
+<p>Weitere Informationen über den Umgang mit Nutzerdaten von Google können Sie der Datenschutzerklärung entnehmen:</p>
+<ul><li><a href="https://policies.google.com/privacy?hl=de">https://policies.google.com/privacy?hl=de</a></li></ul>
+<p>Google verarbeitet die Daten auch in den USA, hat sich jedoch dem<br>EU-US Privacy-Shield unterworfen.</p>
+<p><a href="https://www.privacyshield.gov/EU-US-Framework">https://www.privacyshield.gov/EU-US-Framework</a></p>
+<h5>Server-Log Files</h5>
+<p>Diese Webseite und der damit verbundene Provider erhebt im Zuge der Webseitennutzung automatisch Informationen im Rahmen sogenannter „Server-Log Files". Dies betrifft insbesondere:</p>
+<ul>
+  <li>IP-Adresse oder Hostname</li>
+  <li>den verwendeten Browser</li>
+  <li>Aufenthaltsdauer auf der Webseite sowie Datum und Uhrzeit</li>
+  <li>aufgerufene Seiten der Webseite</li>
+  <li>Spracheinstellungen und Betriebssystem</li>
+  <li>„Leaving-Page" (auf welcher URL hat der Benutzer die Webseite verlassen)</li>
+  <li>ISP (Internet Service Provider)</li>
+</ul>
+<p>Diese erhobenen Informationen werden nicht personenbezogen verarbeitet oder mit personenbezogenen Daten in Verbindung gebracht.</p>
+<p>Der Webseitenbetreiber behält es sich vor, im Falle von Bekanntwerden rechtswidriger Tätigkeiten, diese Daten auszuwerten oder zu überprüfen.</p>
+<h5>Ihre Rechte als Betroffener</h5>
+<p>Sie als Betroffener haben bezüglich Ihrer Daten, welche bei uns gespeichert sind grundsätzlich ein Recht auf:</p>
+<ul>
+  <li>Auskunft</li>
+  <li>Löschung der Daten</li>
+  <li>Berichtigung der Daten</li>
+  <li>Übertragbarkeit der Daten</li>
+  <li>Wiederruf und Widerspruch zur Datenverarbeitung</li>
+  <li>Einschränkung</li>
+</ul>
+<p>Wenn sie vermuten, dass im Zuge der Verarbeitung Ihrer Daten Verstöße gegen das Datenschutzrecht passiert sind, so haben Sie die Möglichkeit sich bei uns (hi2026 [at] christoph [strich] neuwirth [punkt] at) oder der Datenschutzbehörde zu beschweren.</p>
+<h5>Sie erreichen uns unter folgenden Kontaktdaten:</h5>
+<p><b>Webseitenbetreiber:</b> Christoph Neuwirth<br><b>Telefonnummer:</b> +43 681 10784594<br><b>Email:</b> hi2026 [at] christoph [strich] neuwirth [punkt] at</p>
+<p><span>Rechtstext von </span>Quelle: fairesRecht.at in Kooperation mit <b><a href="https://kredit123.at/immobilienkredit-finanzierung-vergleich-rechner">Immobilienkredit Rechner</a></b></p>`,
+      },
+      en: {
+        page_title: 'Privacy – V-Checker',
+        subtitle: 'Privacy Policy',
+        back_to_app: '← Back to the app',
+        back_to_v_checker: '← Back to V-Checker',
+        link_imprint: 'Imprint',
+        body_html: `
+<h3>Declaration on the Duty to Provide Information</h3>
+<p><strong>Privacy Policy</strong></p>
+<p>In the following privacy policy, we inform you about the most important aspects of data processing within the scope of our website. We collect and process personal data only on the basis of the statutory provisions (General Data Protection Regulation, Telecommunications Act 2003).</p>
+<p>As soon as you, as a user, access or visit our website, your IP address, start time, as well as the beginning and end of the session are recorded. This is technically necessary and therefore constitutes a legitimate interest within the meaning of Art. 6 para. 1 lit. f GDPR.</p>
+<h5>Contacting us</h5>
+<p>If you contact us, either via our contact form on our website or by email, the data you transmit to us will be stored by us for six months for the purpose of processing your inquiry or in case of further follow-up questions. Your transmitted data will not be passed on without your consent.</p>
+<h5>Cookies</h5>
+<p>Our website uses so-called cookies. These are small text files that are stored on your device with the help of the browser. They do not cause any damage. We use cookies to make our offer user-friendly. Some cookies remain stored on your device until you delete them. They enable us to recognize your browser on your next visit. If you do not want this, you can set your browser so that it informs you about the setting of cookies and you only allow this in individual cases. If cookies are disabled, the functionality of our website may be limited.</p>
+<h5>Google Fonts</h5>
+<p>Our website uses fonts from "Google Fonts". The service provider of this function is:</p>
+<ul><li>Google Ireland Limited Gordon House, Barrow Street Dublin 4. Ireland</li></ul>
+<p>Tel: +353 1 543 1000</p>
+<p>When this website is accessed, your browser loads fonts and stores them in the cache. Since you, as a visitor to the website, receive data from the service provider, Google may, under certain circumstances, set or analyze cookies on your computer.</p>
+<p>The use of "Google Fonts" serves to optimize our service and to present content uniformly. This constitutes a legitimate interest within the meaning of Art. 6 para. 1 lit. f GDPR.</p>
+<p>Further information about Google Fonts can be found at the following link:</p>
+<ul><li><a href="https://developers.google.com/fonts/faq">https://developers.google.com/fonts/faq</a></li></ul>
+<p>Further information about Google's handling of user data can be found in the privacy policy:</p>
+<ul><li><a href="https://policies.google.com/privacy?hl=de">https://policies.google.com/privacy?hl=de</a></li></ul>
+<p>Google also processes data in the USA, but has submitted to the<br>EU-US Privacy Shield.</p>
+<p><a href="https://www.privacyshield.gov/EU-US-Framework">https://www.privacyshield.gov/EU-US-Framework</a></p>
+<h5>Server Log Files</h5>
+<p>This website and the associated provider automatically collect information in the course of website use within the scope of so-called "server log files". This particularly concerns:</p>
+<ul>
+  <li>IP address or hostname</li>
+  <li>the browser used</li>
+  <li>duration of stay on the website as well as date and time</li>
+  <li>pages of the website accessed</li>
+  <li>language settings and operating system</li>
+  <li>"Leaving page" (the URL on which the user left the website)</li>
+  <li>ISP (Internet Service Provider)</li>
+</ul>
+<p>This collected information is not processed in a personal manner or linked to personal data.</p>
+<p>The website operator reserves the right, in the event that unlawful activities become known, to evaluate or check this data.</p>
+<h5>Your rights as a data subject</h5>
+<p>As a data subject, you generally have the following rights regarding your data stored by us:</p>
+<ul>
+  <li>Information</li>
+  <li>Deletion of the data</li>
+  <li>Correction of the data</li>
+  <li>Data portability</li>
+  <li>Withdrawal and objection to data processing</li>
+  <li>Restriction</li>
+</ul>
+<p>If you suspect that violations of data protection law have occurred in the course of processing your data, you have the option to complain to us (hi2026 [at] christoph [strich] neuwirth [punkt] at) or to the data protection authority.</p>
+<h5>You can reach us at the following contact details:</h5>
+<p><b>Website operator:</b> Christoph Neuwirth<br><b>Telephone number:</b> +43 681 10784594<br><b>Email:</b> hi2026 [at] christoph [strich] neuwirth [punkt] at</p>
+<p><span>Legal text from source: </span>fairesRecht.at in cooperation with <b><a href="https://kredit123.at/">Immobilienkredit Vergleich</a></b></p>`,
+      },
+    };
+
+    function applyLang(lang) {
+      if (lang !== 'de' && lang !== 'en') lang = 'en';
+      localStorage.setItem(LANG_KEY, lang);
+      document.documentElement.lang = lang;
+      document.title = STRINGS[lang].page_title;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const k = el.dataset.i18n;
+        if (STRINGS[lang][k] !== undefined) el.textContent = STRINGS[lang][k];
+      });
+      document.querySelectorAll('[data-i18n-html]').forEach(el => {
+        const k = el.dataset.i18nHtml;
+        if (STRINGS[lang][k] !== undefined) el.innerHTML = STRINGS[lang][k];
+      });
+      document.getElementById('uiLangDe').classList.toggle('active', lang === 'de');
+      document.getElementById('uiLangEn').classList.toggle('active', lang === 'en');
+    }
+
+    document.getElementById('uiLangDe').addEventListener('click', () => applyLang('de'));
+    document.getElementById('uiLangEn').addEventListener('click', () => applyLang('en'));
+
+    const saved = localStorage.getItem(LANG_KEY);
+    applyLang(saved === 'de' || saved === 'en' ? saved : 'en');
+  })();
+  </script>
+</body>
+</html>
