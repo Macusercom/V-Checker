@@ -3,7 +3,7 @@
 # V-Checker
 A privacy-first web app that scans product ingredient lists and tells you if they're vegan or vegetarian. All processing happens locally in the browser — no cloud, no tracking.
 
-🌐 **[Try it live → macusercom.github.io/V-Checker](https://macusercom.github.io/V-Checker/)**
+🌐 **[Try it live → macusercom.github.io/v-checker](https://macusercom.github.io/v-checker/)**
 
 
 ## Features
@@ -19,7 +19,7 @@ A privacy-first web app that scans product ingredient lists and tells you if the
 
 
 ## How To Use
-1. Open **[macusercom.github.io/V-Checker](https://macusercom.github.io/V-Checker/)** in your browser
+1. Open **[macusercom.github.io/v-checker](https://macusercom.github.io/v-checker/)** in your browser
 2. Tap **Take photo** or **Choose from gallery** and select an image of the ingredient list
 3. Select the language of the text on the packaging (OCR Language)
 4. Adjust the threshold slider if needed to improve contrast, then tap **Analyse →**
@@ -33,8 +33,8 @@ No install required. Works on mobile and desktop.
 Tesseract.js requires a local server — opening `index.html` directly as `file://` will not work.
 
 ```
-git clone https://github.com/Macusercom/V-Checker.git
-cd V-Checker
+git clone https://github.com/Macusercom/v-checker.git
+cd v-checker
 python3 -m http.server
 ```
 
