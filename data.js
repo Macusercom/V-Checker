@@ -638,7 +638,7 @@ window.V_CHECK_DATA = {
       termsFr: ["oeuf", "oeufs", "jaune d'oeuf", "blanc d'oeuf", "oeuf entier", "poudre d'oeuf", "ovalbumine"],
       termsIt: ["uovo", "uova", "tuorlo d'uovo", "albume d'uovo", "uovo intero", "uovo in polvere", "ovoalbumina", "ovomucoide"],
       termsEs: ["huevo", "huevos", "yema de huevo", "clara de huevo", "huevo entero", "huevo en polvo", "ovoalbumina"],
-      exclude: ["eifrei", "veganes ei", "ei-ersatz", "egg-free", "vegan egg", "egg replacer", "sans oeuf", "senza uova", "sin huevo", "eggplant", "egg fruit", "egg nog"]
+      exclude: ["eifrei", "veganes ei", "ei-ersatz", "egg-free", "vegan egg", "egg replacer", "sans oeuf", "senza uova", "sin huevo", "eggplant", "egg fruit", "egg nog", "freier", "freie", "freies", "freien", "freiem"]
     },
     {
       status: "vegetarian",
