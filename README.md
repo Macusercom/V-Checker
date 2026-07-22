@@ -1,4 +1,4 @@
-<img src="favicon/android-chrome-192x192.png" alt="V-Checker icon" height="100">
+<img src="docs/favicon/android-chrome-192x192.png" alt="V-Checker icon" height="100">
 
 # V-Checker
 A privacy-first web app that scans product ingredient lists and tells you if they're vegan or vegetarian. All processing happens locally in the browser — no cloud, no tracking.
